@@ -1,0 +1,5 @@
+#!/bin/bash
+if [ $# -eq 0 ]
+then members network-admin
+else adduser --conf /usr/share/netsh/adduser.conf "$@"
+fi

@@ -1,0 +1,1 @@
+%network-admin ALL= NOPASSWD:FOLLOW: /usr/share/netsh/sbin/ , /usr/bin/systemctl restart networking.service , /usr/bin/systemctl start networking.service , /usr/bin/systemctl status networking.service , /usr/bin/systemctl stop networking.service , sudoedit /etc/network/interfaces , sudoedit /etc/resolv.conf

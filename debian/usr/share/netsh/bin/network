@@ -1,0 +1,25 @@
+#!/bin/bash
+
+case "$1" in
+edit)
+    /usr/bin/sudoedit /etc/network/interfaces
+    ;;
+resolv)
+    /usr/bin/sudoedit /etc/resolv.conf
+    ;;
+restart)
+    /usr/bin/sudo /usr/bin/systemctl restart networking.service
+    ;;
+start)
+    /usr/bin/sudo /usr/bin/systemctl start networking.service
+    ;;
+status)
+    /usr/bin/sudo /usr/bin/systemctl status networking.service
+    ;;
+stop)
+    /usr/bin/sudo /usr/bin/systemctl stop networking.service
+    ;;
+*)
+    echo $"Usage: network {edit|start|stop|restart|status|resolv}"
+    exit 1
+esac
